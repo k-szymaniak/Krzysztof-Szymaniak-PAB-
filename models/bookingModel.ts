@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
-//import {Stolik} from './stolikModel';
-const rezerwacaja = new mongoose.Schema({
-    stolik: {
+const booking = new mongoose.Schema({
+    table: {
         type: String,
         required: true,
     },
@@ -19,5 +18,5 @@ const rezerwacaja = new mongoose.Schema({
     },
 })
 
-const rezerwacajaModels = mongoose.model('rezerwacaja',rezerwacaja)
-export default rezerwacajaModels;
+const bookingModels = mongoose.model('booking',booking)
+export default bookingModels;

@@ -1,19 +1,19 @@
 import mongoose from "mongoose";
 
-const danie = new mongoose.Schema({
-    nazwa: {
+const dish = new mongoose.Schema({
+    name: {
         type:String,
         required: true,
     },
-    cena: {
+    price: {
         type:Number,
         require:true,
     },
-    kategoria: {
+    category: {
         type:String,
         required:true,
     },
 })
 
-const danieModels = mongoose.model('danie',danie)
-export default danieModels;
+const dishModels = mongoose.model('dish',dish)
+export default dishModels;

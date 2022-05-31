@@ -7,26 +7,26 @@ app.use(express.json())
 
 main();
 
-const danie = require('./routes/danieRouter');
-app.use('/dania', danie);
+const danie = require('./routes/dishRouter');
+app.use('/dish', danie);
 
-const pracownik = require('./routes/pracownikRouter');
-app.use('/pracownik', pracownik);
+const worker = require('./routes/workerRouter');
+app.use('/worker', worker);
 
-const produkt = require('./routes/produktRouter');
-app.use('/produkty', produkt);
+const product = require('./routes/productRouter');
+app.use('/producty', product);
 
-const restauracja = require('./routes/restauracjaRouter');
-app.use('/restauracje', restauracja);
+const restaurant = require('./routes/restaurantRouter');
+app.use('/restauracje', restaurant);
 
-const rezerwacaja = require('./routes/rezerwacjaRouter');
+const rezerwacaja = require('./routes/bookingRouter');
 app.use('/rezerwacaje', rezerwacaja);
 
-const stolik = require('./routes/stolikRouter');
-app.use('/stoliki', stolik);
+const table = require('./routes/tableRouter');
+app.use('/tablei', table);
 
-const zamowienie = require('./routes/zamowienieRouter');
-app.use('/zamówienia', zamowienie);
+const order = require('./routes/orderRouter');
+app.use('/zamówienia', order);
 
 
 app.listen(3000)

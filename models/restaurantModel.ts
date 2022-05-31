@@ -1,15 +1,15 @@
 import mongoose  from "mongoose";
 
-const restauracja = new mongoose.Schema({
-    nazwa:{
+const restaurant = new mongoose.Schema({
+    name:{
         type:String,
         required:true,
     },
-    adres:{
+    address:{
         type:String,
         required:true,
     },
-    telefon: {
+    phone: {
         type:Number,
         required:true,
     },
@@ -26,5 +26,5 @@ const restauracja = new mongoose.Schema({
         required:true,
     }
 })
-const restauracjaModels = mongoose.model('restauracja',restauracja)
-export default restauracjaModels;
+const restaurantModels = mongoose.model('restaurant',restaurant)
+export default restaurantModels;

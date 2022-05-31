@@ -1,18 +1,18 @@
 import mongoose from "mongoose";
-const produkt = new mongoose.Schema({
-    nazwa:{
+const product = new mongoose.Schema({
+    name:{
         type:String,
         required:true,
     },
-    cena:{
+    price:{
         type:Number,
         required:true,
     },
-    ilosc:{
+    quantity:{
         type:Number,
         required:true
     },
-    jednostkaMiary:{
+    value:{
         type:String,
         enum:['g','dg','kg','t'],
         default:'g',
@@ -21,5 +21,5 @@ const produkt = new mongoose.Schema({
     
 })
 
-const produktModels = mongoose.model('produkt',produkt)
-export default produktModels;
+const productModels = mongoose.model('product',product)
+export default productModels;

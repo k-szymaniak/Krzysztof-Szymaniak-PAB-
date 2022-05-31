@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
- const zamowienie = new mongoose.Schema({
-    pracownik:{
+ const order = new mongoose.Schema({
+    worker:{
         type:String,
         required:true,
     },
-    danie:{
+    dish:{
         type:String,
         required:true,
     },
@@ -13,15 +13,15 @@ import mongoose from "mongoose";
         type:String,
         required:true
     },
-    stolik:{
+    table:{
         type:String,
-        enum:['zamowiony','w_trakcie','zrealizowany','rachunek'],
+        enum:['ordered','during','end','bill'],
         required:true
     },
-    cena:{
+    price:{
         type:Number,
         required:true
     }    
 })
-const zamowienieModels = mongoose.model('zamowienie',zamowienie)
-export default zamowienieModels;
+const orderModels = mongoose.model('order',order)
+export default orderModels;

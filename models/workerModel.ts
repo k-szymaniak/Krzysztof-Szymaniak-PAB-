@@ -1,19 +1,19 @@
 import mongoose from "mongoose";
 
-const pracownik = new mongoose.Schema({
-    imie:{
+const weroker = new mongoose.Schema({
+    name:{
         type:String,
         required:true,
     },
-    nazwisko:{
+    surname:{
         type:String,
         required:true,
     },
-    stanowisko:{
+    position:{
         type:String,
         required:true,
     },
 })
 
-const pracownikModels = mongoose.model('pracownik',pracownik)
-export default pracownikModels;
+const werokerModels = mongoose.model('weroker',weroker)
+export default werokerModels;
