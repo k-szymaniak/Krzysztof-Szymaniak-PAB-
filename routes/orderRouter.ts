@@ -4,20 +4,21 @@ import orderModels from '../models/orderModel';
 const router = express.Router();
 const app = express();
 
-//GET
 app.use(express.json());
 
 router.post('/',async (req:Request, res:Response) =>{
     const order = new orderModels({
-        name:req.body.name,
-        numberofseats:req.body.numberofseats,
-        status:req.body.status
+        worker:req.body.worker,
+        dish:req.body.dish,
+        status:req.body.status,
+        table:req.body.table,
+        price:req.body.price
     })
     const saveorder = await order.save();
     res.status(201).json(order);
 })
 
-router.get('/:id',async (req:Request, res:Response) => {
+router.get('/',async (req:Request, res:Response) => {
     const order = await orderModels.find();
     res.status(201).send(order);
 })

@@ -4,7 +4,6 @@ import bookingModels from '../models/bookingModel';
 const router = express.Router();
 const app = express();
 
-
 app.use(express.json());
 
 router.post('/',async (req:Request, res:Response) =>{

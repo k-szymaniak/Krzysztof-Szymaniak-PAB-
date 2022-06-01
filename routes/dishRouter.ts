@@ -4,7 +4,6 @@ import dishModels from '../models/dishModel';
 const router = express.Router();
 const app = express();
 
-//GET
 app.use(express.json());
 
 router.post('/',async (req:Request, res:Response) =>{

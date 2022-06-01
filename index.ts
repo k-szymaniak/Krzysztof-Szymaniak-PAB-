@@ -14,19 +14,19 @@ const worker = require('./routes/workerRouter');
 app.use('/worker', worker);
 
 const product = require('./routes/productRouter');
-app.use('/producty', product);
+app.use('/product', product);
 
 const restaurant = require('./routes/restaurantRouter');
-app.use('/restauracje', restaurant);
+app.use('/restaurant', restaurant);
 
 const rezerwacaja = require('./routes/bookingRouter');
-app.use('/rezerwacaje', rezerwacaja);
+app.use('/booking', rezerwacaja);
 
 const table = require('./routes/tableRouter');
-app.use('/tablei', table);
+app.use('/table', table);
 
 const order = require('./routes/orderRouter');
-app.use('/zamówienia', order);
+app.use('/order', order);
 
 
 app.listen(3000)

@@ -4,7 +4,6 @@ import workerModels from '../models/workerModel';
 const router = express.Router();
 const app = express();
 
-//GET
 app.use(express.json());
 
 router.post('/',async (req:Request, res:Response) =>{
@@ -21,6 +20,7 @@ router.get('/',async (req:Request, res:Response) => {
     const worker = await workerModels.find();
     res.status(201).send(worker);
 })
+
 
 router.put('/:id',async (req:Request, res:Response) => {
     const worker = await workerModels.findByIdAndUpdate(req.params.id, {$set:req.body},{

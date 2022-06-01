@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const table = new mongoose.Schema({
     name: {
-        type: String,
+        type:Number,
         required: true,
     },
     numberofseats: {

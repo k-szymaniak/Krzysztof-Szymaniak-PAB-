@@ -4,12 +4,11 @@ import tableModels from '../models/tableModel';
 const router = express.Router();
 const app = express();
 
-//GET
 app.use(express.json());
 
 router.post('/',async (req:Request, res:Response) =>{
     const table = new tableModels({
-        nazwa:req.body.nazwa,
+        name:req.body.name,
         numberofseats:req.body.numberofseats,
         status:req.body.status
     })
@@ -17,7 +16,7 @@ router.post('/',async (req:Request, res:Response) =>{
     res.status(201).json(table);
 })
 
-router.get('/:id',async (req:Request, res:Response) => {
+router.get('/',async (req:Request, res:Response) => {
     const table = await tableModels.find();
     res.status(201).send(table);
 })

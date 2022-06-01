@@ -9,11 +9,11 @@ import mongoose from "mongoose";
         type:String,
         required:true,
     },
-    status:{
-        type:String,
+    table:{
+        type:Number,
         required:true
     },
-    table:{
+    status:{
         type:String,
         enum:['ordered','during','end','bill'],
         required:true
