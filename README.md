@@ -37,7 +37,7 @@
 /
 /booking
 {
-"table":"free",
+"table":"1",
 "start":"12",
 "end":"13",
 "client":"alex"
